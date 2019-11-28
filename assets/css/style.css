@@ -22,3 +22,36 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+
+#instructions{
+    background-color: yellow;
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+}
+
+#score-box{
+    background-color: yellowgreen;
+    height: 200px;
+    width: 300px;
+    margin-left: 50px;
+    float: left;
+    border: 1px solid black;
+}
+
+#score{
+    font-size: 48px;
+    text-align: center;
+    margin: auto;
+    top: 50%;
+}
+
+#record-box{
+    background-color: yellowgreen;
+    height: 200px;
+    width: 100px;
+    margin-left: 25px;
+    float: left;
+    border: 1px solid black;
+}

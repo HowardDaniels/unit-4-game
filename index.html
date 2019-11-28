@@ -7,8 +7,31 @@
     </head>
     <body>
         <div class="row">
-            <div class="col-md-3" id="title-box"><div class="title">Crystals Collector!</title></div>
+            <div id="title-box"><div class="title">Crystals Collector!</div></div>
         </div>
+        <br>
+        <div class="row" id="instructions-row">
+            <div id="instructions">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+                <p>You win the game by matching your total score to the random number. If your score goes over the random number, you lose the game.</p>
+                <p>The crystals' values are hidden until you click on them.</p>
+                <p>Each time the game starts, the crystals are reassigned new values.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row" id="box-row">
+            <div id="score-box">
+                <p id="score">##</p>
+            </div>
+            
+            <div id="record-box">
+                <p>Wins:</p>
+                <p>Losses:</p>
+            </div>
+        </div>
+
         <script src="assets/javascript/game.js"></script>
+
     </body>
 </html>
