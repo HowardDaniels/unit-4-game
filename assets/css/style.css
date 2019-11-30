@@ -46,6 +46,13 @@ body{
     top: 50%;
 }
 
+#user-score{
+    font-size: 48px;
+    text-align: center;
+    margin: auto;
+    top: 50%;
+}
+
 #record-box{
     background-color: yellowgreen;
     height: 200px;
