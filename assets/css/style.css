@@ -34,7 +34,6 @@ body{
 #score-box{
     background-color: yellowgreen;
     height: 200px;
-    width: 300px;
     margin-left: 50px;
     float: left;
     border: 1px solid black;
@@ -50,8 +49,59 @@ body{
 #record-box{
     background-color: yellowgreen;
     height: 200px;
-    width: 100px;
     margin-left: 25px;
     float: left;
+    border: 1px solid black;
+}
+
+#jewel-box{
+    height: 200px;
+    width: 635px;
+    background-color: tan;
+    margin-left: 50px;
+}
+
+#gem-row{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#ruby{
+    background-image: url("../images/ruby.jpg");
+    height: 100px;
+    margin-right: 10px;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+#beryl{
+    background-image: url("../images/beryl.jpg");
+    height: 100px;
+    margin-right: 10px;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+#emerald{
+    background-image: url("../images/emerald.jpg");
+    height: 100px;
+    margin-right: 10px;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+#sapphire{
+    background-image: url("../images/sapphire.jpg");
+    height: 100px;
+    margin-right: 10px;
+    float: left;
+    background-position: center;
+    background-size: cover;
     border: 1px solid black;
 }
