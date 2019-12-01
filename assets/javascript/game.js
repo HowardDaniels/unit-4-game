@@ -3,6 +3,11 @@ document.getElementById("score").innerHTML = random;
 var userScore = 0;
 document.getElementById("user-score").innerHTML = userScore;
 
+var ruby = 0;
+var beryl = 0;
+var emerald = 0;
+var sapphire = 0;
+
 if (random < 4) {
     ruby = 0;
     beryl = 1;
@@ -177,28 +182,3 @@ else if (random > 95){
     emerald = 1;
     sapphire = 5;
 }
-
-document.getElementById("ruby-button").addEventListener("click", rubyClick);
-document.getElementById("beryl-button").addEventListener("click", berylClick);
-document.getElementById("emerald-button").addEventListener("click", emeraldClick);
-document.getElementById("sapphire-button").addEventListener("click", sapphireClick);
-
-function rubyClick() {
-  document.getElementById("ruby-button").innerHTML;
-  userScore += ruby;
-}
-
-function berylClick() {
-  document.getElementById("beryl-button").innerHTML;
-  userScore += beryl;
-}
-
-function emeraldClick() {
-    document.getElementById("emerald-button").innerHTML;
-    userScore += emerald;
-  }
-
-function emeraldClick() {
-    document.getElementById("sapphire-button").innerHTML;
-    userScore += sapphire;
-  }
