@@ -3,6 +3,8 @@ localStorage.clear();
 var random = Math.floor(Math.random() * 100);
 document.getElementById("score").innerHTML = random;
 var userScore = document.querySelector("#user-score");
+var wins = document.querySelector("#wins");
+var losses = document.querySelector("#losses");
 var rubyButton = document.querySelector("#ruby-button");
 var berylButton = document.querySelector("#beryl-button");
 var emeraldButton = document.querySelector("#emerald-button");
@@ -11,6 +13,16 @@ var sapphireButton = document.querySelector("#sapphire-button");
 var count = localStorage.getItem("count");
 userScore.textContent = 0;
 userScore.textContent = count;
+
+var winCount = localStorage.getItem("winCount");
+wins.textContent = 0;
+wins.textContent = winCount;
+
+var lossCount = localStorage.getItem("lossCount");
+losses.textContent = 0;
+losses.textContent = lossCount;
+
+var resultDisplay = document.querySelector("#result-display");
 
 if (random < 4) {
     ruby = 0;
@@ -192,6 +204,29 @@ rubyButton.addEventListener("click", function() {
   userScore.textContent = count;
 
   localStorage.setItem("count", count);
+
+  if (count < random){
+    winCount += 0;
+    wins.textContent = winCount;
+    localStorage.setItem("winCount", winCount);
+    lossCount += 0;
+    losses.textContent = lossCount;
+    localStorage.setItem("lossCount", lossCount);
+}
+
+else if (count == random){
+    winCount++;
+    wins.textContent = winCount;
+    localStorage.setItem("winCount", winCount);
+    resultDisplay.textContent = "You won!";
+}
+
+else if (count > random){
+    lossCount++;
+    losses.textContent = lossCount;
+    localStorage.setItem("lossCount", lossCount);
+    resultDisplay.textContent = "You lost!";
+}
 });
 
 berylButton.addEventListener("click", function() {
@@ -199,6 +234,29 @@ berylButton.addEventListener("click", function() {
   userScore.textContent = count;
 
   localStorage.setItem("count", count);
+
+  if (count < random){
+    winCount += 0;
+    wins.textContent = winCount;
+    localStorage.setItem("winCount", winCount);
+    lossCount += 0;
+    losses.textContent = lossCount;
+    localStorage.setItem("lossCount", lossCount);
+}
+
+else if (count == random){
+    winCount++;
+    wins.textContent = winCount;
+    localStorage.setItem("winCount", winCount);
+    resultDisplay.textContent = "You won!";
+}
+
+else if (count > random){
+    lossCount++;
+    losses.textContent = lossCount;
+    localStorage.setItem("lossCount", lossCount);
+    resultDisplay.textContent = "You lost!";
+}
 });
 
 emeraldButton.addEventListener("click", function() {
@@ -206,6 +264,29 @@ emeraldButton.addEventListener("click", function() {
     userScore.textContent = count;
   
     localStorage.setItem("count", count);
+
+    if (count < random){
+        winCount += 0;
+        wins.textContent = winCount;
+        localStorage.setItem("winCount", winCount);
+        lossCount += 0;
+        losses.textContent = lossCount;
+        localStorage.setItem("lossCount", lossCount);
+    }
+    
+    else if (count == random){
+        winCount++;
+        wins.textContent = winCount;
+        localStorage.setItem("winCount", winCount);
+        resultDisplay.textContent = "You won!";
+    }
+    
+    else if (count > random){
+        lossCount++;
+        losses.textContent = lossCount;
+        localStorage.setItem("lossCount", lossCount);
+        resultDisplay.textContent = "You lost!";
+    }
   });
 
 sapphireButton.addEventListener("click", function() {
@@ -213,4 +294,28 @@ sapphireButton.addEventListener("click", function() {
     userScore.textContent = count;
   
     localStorage.setItem("count", count);
+
+    if (count < random){
+        winCount += 0;
+        wins.textContent = winCount;
+        localStorage.setItem("winCount", winCount);
+        lossCount += 0;
+        losses.textContent = lossCount;
+        localStorage.setItem("lossCount", lossCount);
+    }
+    
+    else if (count == random){
+        winCount++;
+        wins.textContent = winCount;
+        localStorage.setItem("winCount", winCount);
+        resultDisplay.textContent = "You won!";
+
+    }
+    
+    else if (count > random){
+        lossCount++;
+        losses.textContent = lossCount;
+        localStorage.setItem("lossCount", lossCount);
+        resultDisplay.textContent = "You lose!";
+    }
   });
