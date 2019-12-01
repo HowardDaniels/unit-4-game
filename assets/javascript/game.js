@@ -1,12 +1,16 @@
+localStorage.clear();
+
 var random = Math.floor(Math.random() * 100);
 document.getElementById("score").innerHTML = random;
-var userScore = 0;
-document.getElementById("user-score").innerHTML = userScore;
+var userScore = document.querySelector("#user-score");
+var rubyButton = document.querySelector("#ruby-button");
+var berylButton = document.querySelector("#beryl-button");
+var emeraldButton = document.querySelector("#emerald-button");
+var sapphireButton = document.querySelector("#sapphire-button");
 
-var ruby = 0;
-var beryl = 0;
-var emerald = 0;
-var sapphire = 0;
+var count = localStorage.getItem("count");
+userScore.textContent = 0;
+userScore.textContent = count;
 
 if (random < 4) {
     ruby = 0;
@@ -182,3 +186,31 @@ else if (random > 95){
     emerald = 1;
     sapphire = 5;
 }
+
+rubyButton.addEventListener("click", function() {
+  count += ruby;
+  userScore.textContent = count;
+
+  localStorage.setItem("count", count);
+});
+
+berylButton.addEventListener("click", function() {
+  count += beryl;
+  userScore.textContent = count;
+
+  localStorage.setItem("count", count);
+});
+
+emeraldButton.addEventListener("click", function() {
+    count += emerald;
+    userScore.textContent = count;
+  
+    localStorage.setItem("count", count);
+  });
+
+sapphireButton.addEventListener("click", function() {
+    count += sapphire;
+    userScore.textContent = count;
+  
+    localStorage.setItem("count", count);
+  });
