@@ -23,6 +23,8 @@ losses.textContent = 0;
 losses.textContent = lossCount;
 
 var resultDisplay = document.querySelector("#result-display");
+var newGame = document.querySelector("#new-game");
+var reset = document.querySelector("#reset");
 
 if (random < 4) {
     ruby = 0;
@@ -218,14 +220,14 @@ else if (count == random){
     winCount++;
     wins.textContent = winCount;
     localStorage.setItem("winCount", winCount);
-    resultDisplay.textContent = "You won!";
+    $("#result-display").html("You won!");
 }
 
 else if (count > random){
     lossCount++;
     losses.textContent = lossCount;
     localStorage.setItem("lossCount", lossCount);
-    resultDisplay.textContent = "You lost!";
+    $("#result-display").html("You lost!");
 }
 });
 
@@ -248,14 +250,14 @@ else if (count == random){
     winCount++;
     wins.textContent = winCount;
     localStorage.setItem("winCount", winCount);
-    resultDisplay.textContent = "You won!";
+    $("#result-display").html("You won!");
 }
 
 else if (count > random){
     lossCount++;
     losses.textContent = lossCount;
     localStorage.setItem("lossCount", lossCount);
-    resultDisplay.textContent = "You lost!";
+    $("#result-display").html("You lost!");
 }
 });
 
@@ -278,14 +280,14 @@ emeraldButton.addEventListener("click", function() {
         winCount++;
         wins.textContent = winCount;
         localStorage.setItem("winCount", winCount);
-        resultDisplay.textContent = "You won!";
+        $("#result-display").html("You won!");
     }
     
     else if (count > random){
         lossCount++;
         losses.textContent = lossCount;
         localStorage.setItem("lossCount", lossCount);
-        resultDisplay.textContent = "You lost!";
+        $("#result-display").html("You lost!");
     }
   });
 
@@ -308,7 +310,7 @@ sapphireButton.addEventListener("click", function() {
         winCount++;
         wins.textContent = winCount;
         localStorage.setItem("winCount", winCount);
-        resultDisplay.textContent = "You won!";
+        $("#result-display").html("You won!");
 
     }
     
@@ -316,6 +318,14 @@ sapphireButton.addEventListener("click", function() {
         lossCount++;
         losses.textContent = lossCount;
         localStorage.setItem("lossCount", lossCount);
-        resultDisplay.textContent = "You lose!";
+        $("#result-display").html("You lost!");
     }
   });
+
+  newGame.addEventListener("click", function() {
+      userScore = 0;
+  });
+
+reset.addEventListener("click", function(){
+   localStorage.clear();
+})

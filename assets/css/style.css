@@ -112,3 +112,14 @@ body{
     background-size: cover;
     border: 1px solid black;
 }
+
+#new-game{
+    height: 50px;
+    margin-right: 100px;
+    background-color: lawngreen;
+}
+
+#reset{
+    height: 50px;
+    background-color: orangered;
+}
